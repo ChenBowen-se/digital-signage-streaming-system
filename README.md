@@ -57,6 +57,33 @@ npm install
 ```bash
 npm start
 ```
+### 🇨🇳 国内环境安装指南（无法 `npm install` / Electron 下载失败时）
+
+在中国大陆网络环境下，建议先切换 npm 源，并为 Electron 等二进制依赖配置国内镜像。
+
+---
+
+#### 💻 一键安装（Windows PowerShell）
+```powershell
+# 1) 使用淘宝源（npmmirror）
+npm config set registry https://registry.npmmirror.com
+
+# 2) 可选：安装 cnpm（国内更稳）
+npm install -g cnpm --registry=https://registry.npmmirror.com
+
+# 3) 为 Electron 设置国内镜像（持久环境变量）
+setx ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/
+
+# 4) 安装依赖（任意一种）
+# 推荐：npm
+npm install
+# 或：cnpm
+# cnpm install
+
+# 5) 如果启动提示“'electron' 不是内部或外部命令”
+#   表示项目里尚未安装 electron，补装一次（会从国内镜像下载二进制）
+npm install electron --save-dev
+```
 
 ## 🔧 工作原理
 
