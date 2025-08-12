@@ -1,0 +1,10 @@
+{
+  "backendUrl": "http://116.62.64.33:3000",
+  "playerBaseUrl": "http://116.62.64.33:3000/auto-player?scheduleId=xxx",
+  "panelId": 21,
+  "pollingInterval": 1000,
+  "credentials": { 
+    "username": "admin_cbw", 
+    "password": "123456" 
+  }
+} 
